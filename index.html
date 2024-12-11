@@ -3,144 +3,54 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Cryptocurrency Hub</title>
-
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f9;
-            color: #333;
-        }
-
-        header {
-            background: linear-gradient(135deg, #1e90ff, #6a5acd);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-            font-weight: 700;
-        }
-
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-
-        header .hero-subtext {
-            margin-top: 20px;
-            font-size: 0.9em;
-            opacity: 0.9;
-        }
-
-        header::before, header::after {
-            content: '';
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            animation: floatBubble 8s infinite ease-in-out;
-        }
-
-        header::before {
-            top: -100px;
-            left: -100px;
-        }
-
-        header::after {
-            bottom: -150px;
-            right: -150px;
-            animation-delay: 4s;
-        }
-
-        @keyframes floatBubble {
-            0%, 100% {transform: translateY(0) translateX(0) scale(1);}
-            50% {transform: translateY(-30px) translateX(30px) scale(1.1);}
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-        }
-
-        nav a {
-            color: #fff;
-            padding: 15px 20px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        nav a:hover {
-            background-color: #1e90ff;
-            color: #fff;
-        }
-
-        main {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        main h2 {
-            color: #1e90ff;
-        }
-
-        footer {
-            background-color: #1e90ff;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 60px;
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        footer .socials {
-            margin-top: 10px;
-        }
-
-        footer .socials a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #fff;
-        }
-
-        footer .socials a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Prices - Cryptocurrency Hub</title>
+    <!-- Lien vers le fichier CSS externe -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Cryptocurrency Hub</h1>
-        <p>Your source for the latest in cryptocurrency trends, prices, and knowledge.</p>
-        <p class="hero-subtext">Stay ahead of the curve with real-time data, expert analysis, and comprehensive guides.</p>
+        <p>Live Prices & Market Data</p>
     </header>
     <nav>
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="prices.html">Prices</a>
         <a href="resources.html">Resources</a>
         <a href="contact.html">Contact</a>
     </nav>
     <main>
-        <h2>Welcome to Cryptocurrency Hub</h2>
-        <p>Explore top cryptos, access reliable market data, and find resources to deepen your understanding.</p>
+        <h2>Latest Prices & Market Data</h2>
+        <p>Stay updated with live market movements. The values below update automatically every 10 seconds.</p>
+        <div class="crypto-grid" id="crypto-grid">
+            <div class="crypto-card" data-coin="Bitcoin" data-symbol="BTC">
+                <h3>Bitcoin (BTC)</h3>
+                <p><strong>Price:</strong> <span class="price">$100,467</span></p>
+                <p><strong>24h Change:</strong> <span class="change variation-positive">+3%</span></p>
+                <p><strong>Market Cap:</strong> $1,991B</p>
+            </div>
+            <div class="crypto-card" data-coin="Ethereum" data-symbol="ETH">
+                <h3>Ethereum (ETH)</h3>
+                <p><strong>Price:</strong> <span class="price">$3,800</span></p>
+                <p><strong>24h Change:</strong> <span class="change variation-positive">+2.1%</span></p>
+                <p><strong>Market Cap:</strong> $450B</p>
+            </div>
+            <div class="crypto-card" data-coin="Cardano" data-symbol="ADA">
+                <h3>Cardano (ADA)</h3>
+                <p><strong>Price:</strong> <span class="price">$1.1</span></p>
+                <p><strong>24h Change:</strong> <span class="change variation-negative">-0.5%</span></p>
+                <p><strong>Market Cap:</strong> $37.8B</p>
+            </div>
+            <div class="crypto-card" data-coin="Solana" data-symbol="SOL">
+                <h3>Solana (SOL)</h3>
+                <p><strong>Price:</strong> <span class="price">$228.41</span></p>
+                <p><strong>24h Change:</strong> <span class="change variation-positive">+4.5%</span></p>
+                <p><strong>Market Cap:</strong> $108B</p>
+            </div>
+        </div>
     </main>
     <footer>
-        <p>&copy; 2024 Cryptocurrency Hub. All rights reserved.</p>
+        <p>&copy; 2024 Cryptocurrency Hub.</p>
         <p class="socials">
             <a href="https://twitter.com/maxime.spnc" target="_blank">Twitter</a> | 
             <a href="https://t.me/maxime.spnc" target="_blank">Telegram</a> | 
@@ -149,5 +59,8 @@
         </p>
         <p>Disclaimer: Information provided on this site is for educational and informational purposes only and does not constitute investment advice. Always do your own research before investing.</p>
     </footer>
+
+    <!-- Script JS externe -->
+    <script src="script.js"></script>
 </body>
 </html>
