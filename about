@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>About - CryptoBaby</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0; padding: 0;
+            background: #f4f4f9; color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #1e90ff, #6a5acd);
+            color: white; text-align: center;
+            padding: 50px 20px;
+        }
+        nav {
+            display: flex; justify-content: center; background: #333;
+        }
+        nav a {
+            color: #fff; padding: 15px; text-decoration: none; transition: 0.3s;
+        }
+        nav a:hover {
+            background: #1e90ff;
+        }
+        main {
+            max-width: 800px; margin: 40px auto; padding: 20px;
+            background: #fff; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        h2 { color: #1e90ff; }
+        footer {
+            background: #1e90ff; color: #fff; text-align: center;
+            padding: 20px; margin-top: 40px;
+        }
+        footer a { color: #fff; margin: 0 5px; text-decoration: none; }
+        footer .socials a {
+            margin:0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cryptocurrency Hub</h1>
+        <p>Learn More About Us</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="prices.html">Prices</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <main>
+        <h2>Our Mission</h2>
+        <p>
+            Cryptocurrency Hub is dedicated to providing up-to-date and reliable information about digital currencies. 
+            We believe in the transformative power of blockchain technology and aim to educate, inform, and support our users on their journey.
+        </p>
+        <h2>Our Values</h2>
+        <p>
+            Transparency, innovation, and community are at the heart of what we do. 
+            We strive to make complex crypto concepts accessible and empower you to make informed decisions.
+        </p>
+    </main>
+    <footer>
+        <p>&copy; 2024 Cryptocurrency Hub.</p>
+        <p class="socials">
+            <a href="https://twitter.com/maxime.spnc" target="_blank">Twitter</a> | 
+            <a href="https://t.me/maxime.spnc" target="_blank">Telegram</a> | 
+            <a href="https://www.linkedin.com/in/maxime-spnc" target="_blank">LinkedIn</a> |
+            <a href="https://instagram.com/maxime.spnc" target="_blank">Instagram</a>
+        </p>
+    </footer>
+</body>
+</html>
