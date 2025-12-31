@@ -1,66 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Prices - Cryptocurrency Hub</title>
-    <!-- Lien vers le fichier CSS externe -->
+    <title>Pulse Marchés - Actualités boursières</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Cryptocurrency Hub</h1>
-        <p>Live Prices & Market Data</p>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="prices.html">Prices</a>
-        <a href="resources.html">Resources</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    <main>
-        <h2>Latest Prices & Market Data</h2>
-        <p>Stay updated with live market movements. The values below update automatically every 10 seconds.</p>
-        <div class="crypto-grid" id="crypto-grid">
-            <div class="crypto-card" data-coin="Bitcoin" data-symbol="BTC">
-                <h3>Bitcoin (BTC)</h3>
-                <p><strong>Price:</strong> <span class="price">$100,467</span></p>
-                <p><strong>24h Change:</strong> <span class="change variation-positive">+3%</span></p>
-                <p><strong>Market Cap:</strong> $1,991B</p>
-            </div>
-            <div class="crypto-card" data-coin="Ethereum" data-symbol="ETH">
-                <h3>Ethereum (ETH)</h3>
-                <p><strong>Price:</strong> <span class="price">$3,800</span></p>
-                <p><strong>24h Change:</strong> <span class="change variation-positive">+2.1%</span></p>
-                <p><strong>Market Cap:</strong> $450B</p>
-            </div>
-            <div class="crypto-card" data-coin="Cardano" data-symbol="ADA">
-                <h3>Cardano (ADA)</h3>
-                <p><strong>Price:</strong> <span class="price">$1.1</span></p>
-                <p><strong>24h Change:</strong> <span class="change variation-negative">-0.5%</span></p>
-                <p><strong>Market Cap:</strong> $37.8B</p>
-            </div>
-            <div class="crypto-card" data-coin="Solana" data-symbol="SOL">
-                <h3>Solana (SOL)</h3>
-                <p><strong>Price:</strong> <span class="price">$228.41</span></p>
-                <p><strong>24h Change:</strong> <span class="change variation-positive">+4.5%</span></p>
-                <p><strong>Market Cap:</strong> $108B</p>
+        <div class="header-content">
+            <p class="eyebrow">Actualités boursières en direct</p>
+            <h1>Pulse Marchés</h1>
+            <p>Suivez les marchés financiers, les dernières nouvelles et des graphiques en temps réel incrémentés.</p>
+            <div class="market-highlights">
+                <div>
+                    <span class="label">CAC 40</span>
+                    <span class="value" id="cac-value">7 486 pts</span>
+                </div>
+                <div>
+                    <span class="label">DAX</span>
+                    <span class="value" id="dax-value">18 924 pts</span>
+                </div>
+                <div>
+                    <span class="label">Nasdaq</span>
+                    <span class="value" id="nasdaq-value">16 302 pts</span>
+                </div>
             </div>
         </div>
+    </header>
+
+    <nav>
+        <a href="#marches">Marchés</a>
+        <a href="#actus">Actualités</a>
+        <a href="#secteurs">Secteurs</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section class="ticker" aria-live="polite">
+            <span class="ticker-label">Breaking news</span>
+            <div class="ticker-content" id="news-ticker">
+                Les marchés européens ouvrent en légère hausse, soutenus par les valeurs technologiques.
+            </div>
+        </section>
+
+        <section id="marches">
+            <h2>Indices phares en temps réel</h2>
+            <p>Des graphiques mis à jour toutes les secondes pour visualiser l'évolution instantanée.</p>
+
+            <div class="market-grid">
+                <article class="market-card" data-symbol="CAC 40" data-price="7486">
+                    <div class="market-header">
+                        <h3>CAC 40</h3>
+                        <span class="market-tag">Paris</span>
+                    </div>
+                    <p class="market-price"><span class="price">7 486</span> pts</p>
+                    <p class="market-change variation-positive">+0.42%</p>
+                    <canvas class="market-chart" aria-label="Graphique CAC 40" role="img"></canvas>
+                </article>
+
+                <article class="market-card" data-symbol="DAX" data-price="18924">
+                    <div class="market-header">
+                        <h3>DAX</h3>
+                        <span class="market-tag">Francfort</span>
+                    </div>
+                    <p class="market-price"><span class="price">18 924</span> pts</p>
+                    <p class="market-change variation-negative">-0.18%</p>
+                    <canvas class="market-chart" aria-label="Graphique DAX" role="img"></canvas>
+                </article>
+
+                <article class="market-card" data-symbol="FTSE 100" data-price="7740">
+                    <div class="market-header">
+                        <h3>FTSE 100</h3>
+                        <span class="market-tag">Londres</span>
+                    </div>
+                    <p class="market-price"><span class="price">7 740</span> pts</p>
+                    <p class="market-change variation-positive">+0.31%</p>
+                    <canvas class="market-chart" aria-label="Graphique FTSE 100" role="img"></canvas>
+                </article>
+
+                <article class="market-card" data-symbol="Nasdaq" data-price="16302">
+                    <div class="market-header">
+                        <h3>Nasdaq</h3>
+                        <span class="market-tag">New York</span>
+                    </div>
+                    <p class="market-price"><span class="price">16 302</span> pts</p>
+                    <p class="market-change variation-positive">+0.55%</p>
+                    <canvas class="market-chart" aria-label="Graphique Nasdaq" role="img"></canvas>
+                </article>
+            </div>
+        </section>
+
+        <section id="actus">
+            <h2>À la une aujourd'hui</h2>
+            <div class="news-grid">
+                <article class="news-card">
+                    <h3>Banques européennes : regain d'appétit pour le risque</h3>
+                    <p>Les valeurs bancaires progressent, portées par des prévisions de marge nettes en hausse et une demande de crédit stabilisée.</p>
+                    <span class="news-meta">Mis à jour il y a 12 minutes</span>
+                </article>
+                <article class="news-card">
+                    <h3>Technologie : les semi-conducteurs accélèrent</h3>
+                    <p>Les annonces sur l'IA et les commandes industrielles dopent les semi-conducteurs, moteurs des indices US.</p>
+                    <span class="news-meta">Mis à jour il y a 25 minutes</span>
+                </article>
+                <article class="news-card">
+                    <h3>Énergie : le pétrole se stabilise avant l'OPEP+</h3>
+                    <p>Le Brent oscille autour d'un pivot technique, tandis que les traders attendent des signaux de production.</p>
+                    <span class="news-meta">Mis à jour il y a 35 minutes</span>
+                </article>
+            </div>
+        </section>
+
+        <section id="secteurs">
+            <h2>Radar sectoriel</h2>
+            <div class="sector-grid">
+                <div class="sector-card">
+                    <h3>Tech & IA</h3>
+                    <p>Flux entrants élevés, momentum positif sur les logiciels cloud et l'automatisation.</p>
+                    <span class="sector-score">Momentum: 8.2/10</span>
+                </div>
+                <div class="sector-card">
+                    <h3>Santé</h3>
+                    <p>Rotation défensive, résultats trimestriels supérieurs aux attentes.</p>
+                    <span class="sector-score">Momentum: 6.7/10</span>
+                </div>
+                <div class="sector-card">
+                    <h3>Industrie</h3>
+                    <p>Carnets de commandes solides, mais vigilance sur les coûts d'énergie.</p>
+                    <span class="sector-score">Momentum: 6.1/10</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="agenda">
+            <h2>Agenda macro & résultats</h2>
+            <div class="agenda-list">
+                <div class="agenda-item">
+                    <span class="agenda-time">09:00</span>
+                    <div>
+                        <h4>Inflation zone euro</h4>
+                        <p>Prévision: +2.4% | Précédent: +2.6%</p>
+                    </div>
+                </div>
+                <div class="agenda-item">
+                    <span class="agenda-time">14:30</span>
+                    <div>
+                        <h4>Ventes au détail US</h4>
+                        <p>Prévision: +0.2% | Précédent: +0.4%</p>
+                    </div>
+                </div>
+                <div class="agenda-item">
+                    <span class="agenda-time">18:00</span>
+                    <div>
+                        <h4>Résultats trimestriels - Luxe</h4>
+                        <p>Plusieurs leaders européens attendus.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="cta">
+            <h2>Recevez l'alerte marchés</h2>
+            <p>Inscrivez-vous pour recevoir les dernières actualités boursières, analyses et alertes de volatilité.</p>
+            <form class="cta-form">
+                <input type="email" placeholder="Votre email professionnel" aria-label="Votre email">
+                <button type="button">S'inscrire</button>
+            </form>
+        </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 Cryptocurrency Hub.</p>
+        <p>&copy; 2024 Pulse Marchés. Données simulées à des fins de démonstration.</p>
         <p class="socials">
-            <a href="https://twitter.com/maxime.spnc" target="_blank">Twitter</a> | 
-            <a href="https://t.me/maxime.spnc" target="_blank">Telegram</a> | 
-            <a href="https://www.linkedin.com/in/maxime-spnc" target="_blank">LinkedIn</a> |
-            <a href="https://instagram.com/maxime.spnc" target="_blank">Instagram</a>
+            <a href="https://twitter.com/" target="_blank" rel="noreferrer">Twitter</a> |
+            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a> |
+            <a href="https://www.boursorama.com/" target="_blank" rel="noreferrer">Flux marché</a>
         </p>
-        <p>Disclaimer: Information provided on this site is for educational and informational purposes only and does not constitute investment advice. Always do your own research before investing.</p>
+        <p class="disclaimer">Les informations présentées ne constituent pas un conseil en investissement.</p>
     </footer>
 
-    <!-- Script JS externe -->
     <script src="script.js"></script>
 </body>
 </html>
