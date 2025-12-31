@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -12,7 +11,7 @@
         <div class="header-content">
             <p class="eyebrow">Actualités boursières en direct</p>
             <h1>Pulse Marchés</h1>
-            <p>Suivez les marchés financiers, les dernières nouvelles et des graphiques en temps réel incrémentés.</p>
+            <p>Suivez les marchés financiers, les dernières nouvelles et des graphiques en temps réel.</p>
             <div class="market-highlights">
                 <div>
                     <span class="label">CAC 40</span>
@@ -31,11 +30,11 @@
     </header>
 
     <nav>
-        <a href="#marches">Marchés</a>
-        <a href="#actus">Actualités</a>
-        <a href="#secteurs">Secteurs</a>
-        <a href="#agenda">Agenda</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html">Accueil</a>
+        <a href="marches.html">Marchés</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="resources.html">Ressources</a>
+        <a href="contact.html">Contact</a>
     </nav>
 
     <main>
@@ -46,71 +45,25 @@
             </div>
         </section>
 
-        <section id="marches">
-            <h2>Indices phares en temps réel</h2>
-            <p>Des graphiques mis à jour toutes les secondes pour visualiser l'évolution instantanée.</p>
-
-            <div class="market-grid">
-                <article class="market-card" data-symbol="CAC 40" data-price="7486">
-                    <div class="market-header">
-                        <h3>CAC 40</h3>
-                        <span class="market-tag">Paris</span>
-                    </div>
-                    <p class="market-price"><span class="price">7 486</span> pts</p>
-                    <p class="market-change variation-positive">+0.42%</p>
-                    <canvas class="market-chart" aria-label="Graphique CAC 40" role="img"></canvas>
-                </article>
-
-                <article class="market-card" data-symbol="DAX" data-price="18924">
-                    <div class="market-header">
-                        <h3>DAX</h3>
-                        <span class="market-tag">Francfort</span>
-                    </div>
-                    <p class="market-price"><span class="price">18 924</span> pts</p>
-                    <p class="market-change variation-negative">-0.18%</p>
-                    <canvas class="market-chart" aria-label="Graphique DAX" role="img"></canvas>
-                </article>
-
-                <article class="market-card" data-symbol="FTSE 100" data-price="7740">
-                    <div class="market-header">
-                        <h3>FTSE 100</h3>
-                        <span class="market-tag">Londres</span>
-                    </div>
-                    <p class="market-price"><span class="price">7 740</span> pts</p>
-                    <p class="market-change variation-positive">+0.31%</p>
-                    <canvas class="market-chart" aria-label="Graphique FTSE 100" role="img"></canvas>
-                </article>
-
-                <article class="market-card" data-symbol="Nasdaq" data-price="16302">
-                    <div class="market-header">
-                        <h3>Nasdaq</h3>
-                        <span class="market-tag">New York</span>
-                    </div>
-                    <p class="market-price"><span class="price">16 302</span> pts</p>
-                    <p class="market-change variation-positive">+0.55%</p>
-                    <canvas class="market-chart" aria-label="Graphique Nasdaq" role="img"></canvas>
-                </article>
-            </div>
-        </section>
-
-        <section id="actus">
-            <h2>À la une aujourd'hui</h2>
-            <div class="news-grid">
-                <article class="news-card">
-                    <h3>Banques européennes : regain d'appétit pour le risque</h3>
-                    <p>Les valeurs bancaires progressent, portées par des prévisions de marge nettes en hausse et une demande de crédit stabilisée.</p>
-                    <span class="news-meta">Mis à jour il y a 12 minutes</span>
-                </article>
-                <article class="news-card">
-                    <h3>Technologie : les semi-conducteurs accélèrent</h3>
-                    <p>Les annonces sur l'IA et les commandes industrielles dopent les semi-conducteurs, moteurs des indices US.</p>
-                    <span class="news-meta">Mis à jour il y a 25 minutes</span>
-                </article>
-                <article class="news-card">
-                    <h3>Énergie : le pétrole se stabilise avant l'OPEP+</h3>
-                    <p>Le Brent oscille autour d'un pivot technique, tandis que les traders attendent des signaux de production.</p>
-                    <span class="news-meta">Mis à jour il y a 35 minutes</span>
-                </article>
+        <section class="overview">
+            <h2>Votre hub pour suivre les marchés</h2>
+            <p>
+                Retrouvez sur des pages dédiées les graphiques boursiers en temps réel et les dernières
+                actualités sélectionnées auprès de sources reconnues.
+            </p>
+            <div class="overview-grid">
+                <a class="overview-card" href="marches.html">
+                    <h3>Marchés en direct</h3>
+                    <p>Graphiques réels et indices internationaux mis à jour en continu.</p>
+                </a>
+                <a class="overview-card" href="actualites.html">
+                    <h3>Actualités financières</h3>
+                    <p>Liens directs vers des articles boursiers vérifiés.</p>
+                </a>
+                <a class="overview-card" href="prices.html">
+                    <h3>Suivi des prix</h3>
+                    <p>Repères macroéconomiques, agenda et données clés.</p>
+                </a>
             </div>
         </section>
 
@@ -173,7 +126,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Pulse Marchés. Données simulées à des fins de démonstration.</p>
+        <p>&copy; 2026 Pulse Marchés. Données et graphiques fournis par des sources externes.</p>
         <p class="socials">
             <a href="https://twitter.com/" target="_blank" rel="noreferrer">Twitter</a> |
             <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a> |

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pulse Marchés - Marchés en direct</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="header-content">
+            <p class="eyebrow">Marchés en direct</p>
+            <h1>Graphiques boursiers réels</h1>
+            <p>Consultez les indices internationaux avec des flux temps réel fournis par TradingView.</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="marches.html">Marchés</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="resources.html">Ressources</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <section class="ticker" aria-live="polite">
+            <span class="ticker-label">Breaking news</span>
+            <div class="ticker-content" id="news-ticker">
+                Les marchés européens ouvrent en légère hausse, soutenus par les valeurs technologiques.
+            </div>
+        </section>
+
+        <section class="market-live">
+            <h2>Indices majeurs</h2>
+            <p>Chaque graphique est connecté à un flux de données réel.</p>
+            <div class="market-live-grid">
+                <article class="market-live-card">
+                    <h3>CAC 40</h3>
+                    <div class="tradingview-widget-container">
+                        <div id="tv-cac40"></div>
+                    </div>
+                </article>
+                <article class="market-live-card">
+                    <h3>DAX</h3>
+                    <div class="tradingview-widget-container">
+                        <div id="tv-dax"></div>
+                    </div>
+                </article>
+                <article class="market-live-card">
+                    <h3>FTSE 100</h3>
+                    <div class="tradingview-widget-container">
+                        <div id="tv-ftse"></div>
+                    </div>
+                </article>
+                <article class="market-live-card">
+                    <h3>Nasdaq</h3>
+                    <div class="tradingview-widget-container">
+                        <div id="tv-nasdaq"></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Pulse Marchés. Graphiques en direct via TradingView.</p>
+        <p class="socials">
+            <a href="https://www.tradingview.com/" target="_blank" rel="noreferrer">TradingView</a> |
+            <a href="https://www.boursorama.com/" target="_blank" rel="noreferrer">Flux marché</a>
+        </p>
+        <p class="disclaimer">Les informations présentées ne constituent pas un conseil en investissement.</p>
+    </footer>
+
+    <script src="https://s3.tradingview.com/tv.js"></script>
+    <script>
+        new TradingView.widget({
+            "container_id": "tv-cac40",
+            "symbol": "INDEX:CAC40",
+            "interval": "15",
+            "timezone": "Europe/Paris",
+            "theme": "light",
+            "style": "1",
+            "locale": "fr",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "hide_top_toolbar": true,
+            "hide_legend": true,
+            "allow_symbol_change": false,
+            "save_image": false,
+            "width": "100%",
+            "height": 260
+        });
+        new TradingView.widget({
+            "container_id": "tv-dax",
+            "symbol": "XETR:DAX",
+            "interval": "15",
+            "timezone": "Europe/Berlin",
+            "theme": "light",
+            "style": "1",
+            "locale": "fr",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "hide_top_toolbar": true,
+            "hide_legend": true,
+            "allow_symbol_change": false,
+            "save_image": false,
+            "width": "100%",
+            "height": 260
+        });
+        new TradingView.widget({
+            "container_id": "tv-ftse",
+            "symbol": "INDEX:FTSE",
+            "interval": "15",
+            "timezone": "Europe/London",
+            "theme": "light",
+            "style": "1",
+            "locale": "fr",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "hide_top_toolbar": true,
+            "hide_legend": true,
+            "allow_symbol_change": false,
+            "save_image": false,
+            "width": "100%",
+            "height": 260
+        });
+        new TradingView.widget({
+            "container_id": "tv-nasdaq",
+            "symbol": "NASDAQ:IXIC",
+            "interval": "15",
+            "timezone": "America/New_York",
+            "theme": "light",
+            "style": "1",
+            "locale": "fr",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "hide_top_toolbar": true,
+            "hide_legend": true,
+            "allow_symbol_change": false,
+            "save_image": false,
+            "width": "100%",
+            "height": 260
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
